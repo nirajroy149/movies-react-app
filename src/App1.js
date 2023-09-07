@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const App1 = () => {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/movies-react-app">
       <div className="app">
         <Header />
 
