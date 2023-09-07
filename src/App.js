@@ -3,12 +3,22 @@ import "./App.css";
 import Card from "./Card";
 import searchicon from "./images/search.png"
 
-function App() {
+export default function App() {
 
     const [movies, setMovies] = useState([]);
     const [startloading, setstartLoading] = useState(true);
     const [loading, setLoading] = useState(true);
     const [movieName, setMovieName] = useState("");
+
+
+    useEffect(() => {
+        const title = ["Game", "Avengers", "Netflix", "Horror"];
+        const x = Math.floor(Math.random() * 4);
+        searchMovies(title[x]);
+        setTimeout(() => {
+            setstartLoading(false);
+        }, 2000)
+    }, []);
 
     function handleChange(e) {
         const name = e.target.value;
@@ -22,7 +32,7 @@ function App() {
     }
 
     function handleEnter(e) {
-        if (movieName != "") {
+        if (movieName !== "") {
             if (e.key === "Enter") {
                 setLoading(true)
                 searchMovies(movieName);
@@ -45,7 +55,7 @@ function App() {
             const response = await fetch(`https://online-movie-database.p.rapidapi.com/auto-complete?q=${title}`, options)
             const data = await response.json();
             setMovies(data.d);
-            console.log(data.d);
+            // console.log(data.d);
 
         } catch (error) {
                 console.log(error);
@@ -53,15 +63,8 @@ function App() {
         }
         setLoading(false);
        
-
-    useEffect(() => {
-        const title = ["Game", "Avengers", "Netflix", "Horror"];
-        const x = Math.floor(Math.random() * 4);
-        searchMovies(title[x]);
-        setTimeout(() => {
-            setstartLoading(false);
-        }, 2000)
-    }, []);
+    }
+    
 
     if (startloading) return <h2>Loading...</h2>
 
@@ -93,5 +96,3 @@ function App() {
         </div>
     </>
 }
-export default App;
-

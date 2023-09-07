@@ -1,0 +1,50 @@
+
+
+trending, movies, tv series, search
+
+key={c.id}
+poster={c.poster_path}
+media_type={c.media_type}
+vote_average={c.vote_average}
+
+tv 
+title={c.name}
+r_date={c.first_air_date}
+
+
+movie
+title={c.title}
+r_date={c.release_date}
+
+
+export const img_300 = "https://images.tmdb.org/t/p/w300";
+export const img_500 = "https://images.tmdb.org/t/p/w500";
+
+
+
+onClick=(()=>{window.scroll(0,0)});
+
+{
+    "adult": false,
+    "backdrop_path": "/1Q7HS0d3gGsN5MOI4all8zYU0gq.jpg",
+    "id": 232125,
+    "name": "I Am Groot",
+    "original_language": "en",
+    "original_name": "I Am Groot",
+    "overview": "There’s no guarding the galaxy from this mischievous toddler! Get ready as Baby Groot takes center stage in his very own collection of shorts, exploring his glory days growing up and getting into trouble among the stars.",
+    "poster_path": "/3QfQYECgu6DX5UUWCBvv1Fl0BAJ.jpg",
+    "media_type": "tv",
+    "genre_ids": [
+        16,
+        35,
+        10751,
+        10765
+    ],
+    "popularity": 111.349,
+    "first_air_date": "2023-09-05",
+    "vote_average": 7.759,
+    "vote_count": 27,
+    "origin_country": [
+        "US"
+    ]
+}
