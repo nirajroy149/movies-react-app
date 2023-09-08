@@ -9,10 +9,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const App1 = () => {
   return (
-    <BrowserRouter basename="/movies-react-app">
+    <BrowserRouter>
       <div className="app">
         <Header />
-
         <Routes>
           <Route path="/" element={<Trending />}></Route>
           <Route path="/movies" element={<Movies />}></Route>
