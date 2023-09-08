@@ -21,6 +21,7 @@ function Trending() {
 
   useEffect(() => {
     fethcTrending();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   return (
