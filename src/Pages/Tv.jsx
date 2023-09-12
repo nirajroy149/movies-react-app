@@ -26,7 +26,7 @@ function Tv() {
 
   return (
     <>
-      <div className="w-full min-h-[110vh] bg-black from-gray-500 to-gray-800 flex flex-col justify-center place-content-center pb-[100px]">
+      <div className="w-full min-h-[110vh] bg-black  flex flex-col justify-center place-content-center pb-[100px]">
         <div className="w-full max-w-[1300px] pt-[100px] md:pt-[150px] h-full px-1 sm:px-4 m-auto">
           <PageHeading text="Web Series" />
           <div className="flex flex-wrap justify-around">
