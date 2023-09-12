@@ -41,7 +41,7 @@ function Movies() {
                     key={c.id}
                     id={c.id}
                     poster={c.poster_path}
-                    media_type={c.media_type}
+                    media_type={"movie"}
                     vote_average={c.vote_average}
                     title={c.name || c.title}
                     r_date={c.first_air_date || c.release_date}
