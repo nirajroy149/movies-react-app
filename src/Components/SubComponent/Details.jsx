@@ -6,7 +6,7 @@ const img_500 = "https://images.tmdb.org/t/p/w500";
 const yt = "https://www.youtube.com/watch?v=";
 
 function Details({ open, setOpen, id, media_type, content, videolink }) {
-  // console.log(content);
+  console.log(content);
   return (
     open && (
       <>

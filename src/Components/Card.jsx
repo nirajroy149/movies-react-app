@@ -61,7 +61,8 @@ function Card({ poster, media_type, vote_average, title, r_date, id }) {
         onClick={() => {
           handleClick();
         }}
-        className="hover:cursor-pointer hover:bg-white hover:text-black transition ease-linear relative text-white  flex flex-col w-[180px] sm:w-[220px] p-1 md:m-3 m-1 rounded min-h-[93.471px]"
+        className="relative flex flex-col w-[180px] sm:w-[220px] p-1 md:m-3 m-1 rounded min-h-[93.471px] bg-black hover:bg-white hover:cursor-pointer"
+        style={{}}
       >
         <img
           src={poster ? `${img_300}/${poster}` : `${unavailable}`}
